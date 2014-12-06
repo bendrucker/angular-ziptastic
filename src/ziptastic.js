@@ -10,7 +10,7 @@ module.exports = function ($http) {
         country: 'US'
       }, options);
       if (!options.code) throw new Error('A "code" must be provided for lookup');
-      return $http.get(base + '/' + options.country + '/' + options.code)
+      return $http.get(base + '/' + options.country + '/' + options.code, options.$http)
         .then(function (response) {
           return response.data;
         });

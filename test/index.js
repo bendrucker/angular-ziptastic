@@ -71,4 +71,23 @@ describe('angular-ziptastic', function () {
     expect(ziptastic.lookup).to.throw('"code" must be provided');
   });
 
+  it('can provide options for $http', function () {
+    $httpBackend
+      .expectGET('https://zip.getziptastic.com/v2/US/10009')
+      .respond(200);
+    var called = false;
+    ziptastic.lookup({
+      code: '10009',
+      $http: {
+        transformRequest: function () {
+          called = true;
+        }
+      }
+    })
+    .then(function (data) {
+      expect(called).to.be.true;
+    });
+    $httpBackend.flush();
+  });
+
 });
