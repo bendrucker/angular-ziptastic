@@ -35,5 +35,14 @@
     "karma-mocha": "~0.1.10",
     "karma-phantomjs-launcher": "~0.1.4",
     "mocha": "~2.0.1"
+  },
+  "dependencies": {
+    "browserify-shim": "~3.8.1"
+  },
+  "browserify": {
+    "transform": ["browserify-shim"]
+  },
+  "browserify-shim": {
+    "angular": "global:angular"
   }
 }
