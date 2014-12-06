@@ -21,5 +21,19 @@
   "bugs": {
     "url": "https://github.com/bendrucker/angular-ziptastic/issues"
   },
-  "homepage": "https://github.com/bendrucker/angular-ziptastic"
+  "homepage": "https://github.com/bendrucker/angular-ziptastic",
+  "peerDependencies": {
+    "angular": "~1.3.0"
+  },
+  "devDependencies": {
+    "angular": "~1.3.5",
+    "angular-mocks": "~1.3.5",
+    "chai": "~1.10.0",
+    "karma": "~0.12.28",
+    "karma-browserify": "~1.0.0",
+    "karma-cli": "0.0.4",
+    "karma-mocha": "~0.1.10",
+    "karma-phantomjs-launcher": "~0.1.4",
+    "mocha": "~2.0.1"
+  }
 }
