@@ -1,0 +1,25 @@
+{
+  "name": "angular-ziptastic",
+  "version": "1.0.0",
+  "description": "Ziptastic ZIP -> City/State lookups for Angular",
+  "main": "./src",
+  "scripts": {
+    "test": "karma start --single-run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bendrucker/angular-ziptastic.git"
+  },
+  "keywords": [
+    "ziptastic",
+    "zip",
+    "address",
+    "angular"
+  ],
+  "author": "Ben Drucker <bvdrucker@gmail.com> (http://bendrucker.me)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bendrucker/angular-ziptastic/issues"
+  },
+  "homepage": "https://github.com/bendrucker/angular-ziptastic"
+}
