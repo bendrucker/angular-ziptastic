@@ -1,0 +1,12 @@
+language: node_js
+node_js:
+- '0.10'
+deploy:
+  provider: npm
+  email: bvdrucker@gmail.com
+  api_key:
+    secure: qwC/lbA9vNS5tnJlTe9bVUuKbjlBeDaNuxZ/zjqrenPycjMf9z2zbdr304Od9DTA+gZ9cIBIVtu/rRMPDgVRn+BSUDh3RqRI/lQszdep3x+sJdQoTdIXm71Koy3hHK+fAM+2Wa4414bAg1vSxmHjxbt8XI6nbj5FsfENuDgBtWs=
+  on:
+    tags: true
+    all_branches: true
+    repo: bendrucker/angular-ziptastic
