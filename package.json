@@ -1,6 +1,6 @@
 {
   "name": "angular-ziptastic",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Ziptastic ZIP -> City/State lookups for Angular",
   "main": "./src",
   "scripts": {
@@ -40,7 +40,9 @@
     "browserify-shim": "~3.8.1"
   },
   "browserify": {
-    "transform": ["browserify-shim"]
+    "transform": [
+      "browserify-shim"
+    ]
   },
   "browserify-shim": {
     "angular": "global:angular"
