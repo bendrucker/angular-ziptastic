@@ -2,5 +2,5 @@
 
 module.exports = require('angular')
   .module('ziptastic', [])
-  .factory('ziptastic', require('./ziptastic'))
+  .provider('ziptastic', require('./ziptastic'))
   .name;
