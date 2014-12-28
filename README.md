@@ -42,6 +42,8 @@ Set the default country to use in requests. Defaults to `'US'`.
 
 Set default `config` for `$http`. Defaults to `undefined`. `config` is an object that will be passed directly to [`$http`](https://docs.angularjs.org/api/ng/service/$http#usage) and can be used to set config options like `timeout` and `cache`
 
+<hr>
+
 ### `ziptastic`
 
 ##### `lookup(code|options)` -> `promise`
