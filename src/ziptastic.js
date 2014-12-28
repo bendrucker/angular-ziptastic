@@ -7,11 +7,14 @@ var defaults = {
 };
 
 module.exports = function () {
-  this.setBase = function (base) {
+  this.base = function (base) {
     defaults.base = base;
   };
-  this.setCountry = function (country) {
+  this.country = function (country) {
     defaults.country = country;
+  };
+  this.$http = function (config) {
+    defaults.$http = config;
   };
 
   this.$get = ziptastic;

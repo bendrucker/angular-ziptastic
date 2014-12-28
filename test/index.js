@@ -5,7 +5,6 @@ var expect  = require('chai').expect;
 
 describe('angular-ziptastic', function () {
 
-  var ziptastic, $httpBackend;
   beforeEach(angular.mock.module(require('../')));
 
   it('queries a US zip code by default', angular.mock.inject(function (ziptastic, $httpBackend) {
@@ -86,7 +85,7 @@ describe('angular-ziptastic', function () {
 
   it('can change the default country', function () {
     angular.mock.module(function (ziptasticProvider) {
-      ziptasticProvider.setCountry('NL');
+      ziptasticProvider.country('NL');
     });
     angular.mock.inject(function (ziptastic, $httpBackend) {
       $httpBackend
@@ -99,8 +98,8 @@ describe('angular-ziptastic', function () {
 
   it('can change the default base', function () {
     angular.mock.module(function (ziptasticProvider) {
-      ziptasticProvider.setBase('http://myziptastic.com');
-      ziptasticProvider.setCountry('US');
+      ziptasticProvider.base('http://myziptastic.com');
+      ziptasticProvider.country('US');
     });
     angular.mock.inject(function (ziptastic, $httpBackend) {
       $httpBackend
@@ -108,6 +107,27 @@ describe('angular-ziptastic', function () {
         .respond(200);
       ziptastic.lookup('10009');
       $httpBackend.flush();
+    });
+  });
+
+  it('can set default $http options', function () {
+    angular.mock.module(function (ziptasticProvider) {
+      ziptasticProvider.base('http://myziptastic.com');
+      ziptasticProvider.$http({
+        cache: true
+      });
+    });
+    angular.mock.inject(function (ziptastic, $httpBackend, $cacheFactory) {
+      var url = 'http://myziptastic.com/US/10009';
+      var data = {
+        foo: 'bar'
+      };
+      $httpBackend
+        .expectGET(url)
+        .respond(200, data);
+      ziptastic.lookup('10009');
+      $httpBackend.flush();
+      expect($cacheFactory.get('$http').get(url)[1]).to.deep.equal(data);
     });
   });
 
