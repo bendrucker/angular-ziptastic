@@ -1,4 +1,4 @@
-angular-ziptastic [![Build Status](https://travis-ci.org/bendrucker/angular-ziptastic.svg?branch=master)](https://travis-ci.org/bendrucker/angular-ziptastic)
+angular-ziptastic [![Build Status](https://travis-ci.org/bendrucker/angular-ziptastic.svg?branch=master)](https://travis-ci.org/bendrucker/angular-ziptastic) [![Greenkeeper badge](https://badges.greenkeeper.io/bendrucker/angular-ziptastic.svg)](https://greenkeeper.io/)
 =================
 
 [Ziptastic](http://www.getziptastic.com/) ZIP -> City/State lookups for Angular
